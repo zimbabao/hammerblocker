@@ -1,0 +1,38 @@
+{
+  "author": "Zimbabao Borbaki", 
+
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/hammerlogo.png" 
+     }, 
+    "default_title": "Document.Write Blocker"
+  }, 
+  "content_scripts": [
+    {
+      "all_frames": true, 
+      "js": [
+        "document_start.js"
+      ], 
+      "match_about_blank": true, 
+      "matches": [
+        "http://*/*", 
+        "https://*/*"
+      ], 
+      "run_at": "document_start"
+    }
+  ], 
+  "description": "War again document.write", 
+  "icons": {
+    "128": "icons/hammerlogo.png"
+  }, 
+  "manifest_version": 2, 
+  "minimum_chrome_version": "49.0", 
+  "name": "Document.Write Blocker", 
+  "permissions": [
+    "tabs", 
+    "http://*/*", 
+    "https://*/*"
+  ], 
+  "short_name": "Doc.Write Blocker", 
+  "version": "0.0.1"
+}
